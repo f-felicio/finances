@@ -132,6 +132,7 @@ Temporary Items
 # Cursor
 .cursor/
 .cursorindexingignore
+.specstory
 
 # IDE
 .vscode/

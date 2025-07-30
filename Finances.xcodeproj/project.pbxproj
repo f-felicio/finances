@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		556599712E1E21CC004FBF7B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 556599702E1E21CC004FBF7B /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		556599522E1E1FA5004FBF7B /* Finances.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finances.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -14,7 +18,7 @@
 		556599672E1E1FA7004FBF7B /* Exceptions for "Finances" folder in "Finances" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 556599512E1E1FA5004FBF7B /* Finances */;
 		};
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556599712E1E21CC004FBF7B /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = Finances;
 			packageProductDependencies = (
+				556599702E1E21CC004FBF7B /* FirebaseAuth */,
 			);
 			productName = Finances;
 			productReference = 556599522E1E1FA5004FBF7B /* Finances.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 556599492E1E1FA5004FBF7B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5565996F2E1E21CC004FBF7B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 556599532E1E1FA5004FBF7B /* Products */;
 			projectDirPath = "";
@@ -147,7 +156,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94AF49XAFH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Finances/Info.plist;
+				INFOPLIST_FILE = Finances/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +184,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94AF49XAFH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Finances/Info.plist;
+				INFOPLIST_FILE = Finances/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -337,6 +346,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5565996F2E1E21CC004FBF7B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		556599702E1E21CC004FBF7B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5565996F2E1E21CC004FBF7B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5565994A2E1E1FA5004FBF7B /* Project object */;
 }

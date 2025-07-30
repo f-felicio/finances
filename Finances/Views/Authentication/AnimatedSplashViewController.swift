@@ -17,7 +17,6 @@ class AnimatedSplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Put elements out before animation
         setupInitialPosition()
 
@@ -71,11 +70,24 @@ class AnimatedSplashViewController: UIViewController {
 
         hasNavigated = true
 
-        if Auth.auth().currentUser != nil {
-            SceneDelegate.shared()?.navigateToDashboard()
-        } else {
-            SceneDelegate.shared()?.navigateToLogin()
+    if let currentUser = Auth.auth().currentUser {
+        // Verify if the user still exists and is valid
+        currentUser.getIDToken { token, error in
+            DispatchQueue.main.async {
+                if error != nil {
+                    // User is invalid or doesn't exist anymore
+                    print("❌ User authentication failed, navigating to login")
+                    SceneDelegate.shared()?.navigateToLogin()
+                } else {
+                    // User is valid
+                    print("✅ User authentication valid, navigating to dashboard")
+                    SceneDelegate.shared()?.navigateToDashboard()
+                }
+            }
         }
+    } else {
+        SceneDelegate.shared()?.navigateToLogin()
+    }
     }
 
     private func navigateToDashboard() {

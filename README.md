@@ -48,5 +48,3 @@ open Finances.xcodeproj
 1. Select your target device or simulator
 2. Build and run the project (⌘ + R)
 3. The app should launch successfully
-
-## Project Structure

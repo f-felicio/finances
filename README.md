@@ -2,15 +2,6 @@
 
 A modern iOS application for personal finance management built with Swift and UIKit.
 
-## Features
-
-- 💰 Transaction management
-- 📊 Budget tracking
-- 🔐 Biometric authentication
-- 📱 Modern UI/UX design
-- �� Push notifications
-- �� Financial insights
-
 ## Requirements
 
 - iOS 13.0+

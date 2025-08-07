@@ -2,10 +2,6 @@
 
 A modern iOS application for personal finance management built with Swift and UIKit.
 
- ## Demo
-   
-   ![App Demo](demo.gif)
-
 ## Requirements
 
 - iOS 13.0+
